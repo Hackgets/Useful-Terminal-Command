@@ -8,3 +8,17 @@ Zorin OSを使っていて、便利なターミナルのコマンド。
 ## OptiPNGで、カレントディレクトリのPNGファイルを一括処理する
 `find . -type f -name '*.png' -exec optipng {} +`
 > [OptiPNG で PNG ファイルの最適化を行う方法](https://linux.keicode.com/tools/optipng.php)
+
+## Evolutionのサービスを自動起動させない
+```
+mkdir -p ~/.config/autostart/
+cp /etc/xdg/autostart/org.gnome.Evolution-alarm-notify.desktop ~/.config/autostart/
+sed -i "s/NoDisplay=true/NoDisplay=false/" ~/.config/autostart/org.gnome.Evolution-alarm-notify.desktop
+```
+```
+systemctl --user mask evolution-addressbook-factory.service
+systemctl --user mask evolution-calendar-factory.service
+systemctl --user mask evolution-source-registry.service
+systemctl --user mask evolution-user-prompter.service
+```
+> [How to stop evolution-alarm-notify](https://askubuntu.com/questions/1317784/how-to-stop-evolution-alarm-notify)
