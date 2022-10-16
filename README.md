@@ -25,6 +25,7 @@ systemctl --user mask evolution-user-prompter.service
 
 ## ターミナルからゴミ箱を開く
 `nautilus trash://`
+> [How to open "Trash" through terminal?](https://askubuntu.com/questions/327943/how-to-open-trash-through-terminal)
 
 これを利用して、`~/.local/shere/applications`に以下のようなdesktopファイルを作れば、メインメニューにアプリケーションとして表示される。お気に入りに登録すれば、タスクバーからゴミ箱を開くことも出来る。
 ```
