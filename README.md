@@ -22,3 +22,21 @@ systemctl --user mask evolution-source-registry.service
 systemctl --user mask evolution-user-prompter.service
 ```
 > [How to stop evolution-alarm-notify](https://askubuntu.com/questions/1317784/how-to-stop-evolution-alarm-notify)
+
+## ターミナルからゴミ箱を開く
+`nautilus trash://`
+
+これを利用して、`~/.local/shere/applications`に以下のようなdesktopファイルを作れば、メインメニューにアプリケーションとして表示される。お気に入りに登録すれば、タスクバーからゴミ箱を開くことも出来る。
+```
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name[ja]=ゴミ箱
+Name=Trash
+Icon=/usr/share/icons/ZorinGrey-Dark/16x16/actions/edit-delete.svg
+Exec=nautilus trash://
+NoDisplay=false
+Categories=Utility;GTK;GNOME;
+StartupNotify=false
+Terminal=false
+```
