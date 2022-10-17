@@ -37,7 +37,7 @@ Name=Trash
 Icon=/usr/share/icons/Zorin/16x16/places/user-trash.svg
 Exec=nautilus trash://
 NoDisplay=false
-Categories=Utility;GTK;GNOME;
+Categories=Utility
 StartupNotify=false
 Terminal=false
 ```
