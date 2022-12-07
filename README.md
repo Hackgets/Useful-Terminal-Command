@@ -41,3 +41,21 @@ Categories=Utility
 StartupNotify=false
 Terminal=false
 ```
+
+## PCの電源を切る
+`gnome-session-quit --power-off`
+
+これを利用して、`~/.local/shere/applications`に以下のようなdesktopファイルを作れば…
+```
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name[ja]=電源を切る
+Name=Power off
+Icon=/usr/share/icons/ZorinGrey-Dark/16x16/panel/system-devices-panel-alert.svg
+Exec=gnome-session-quit --power-off
+NoDisplay=false
+Categories=Utility
+StartupNotify=false
+Terminal=false
+```
