@@ -55,6 +55,3 @@ Categories=Utility
 StartupNotify=false
 Terminal=false
 ```
-
-## メニューキーをSuperキーに差し替える
-`xmodmap -e "keycode 135 = Super_L"`
