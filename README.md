@@ -55,3 +55,40 @@ Categories=Utility
 StartupNotify=false
 Terminal=false
 ```
+
+## Conkyの自動起動
+`conky --daemonize --pause=5`
+
+こうしないと、表示がおかしくなるようだ。
+
+### おまけ
+```
+conky.config = {
+    alignment = 'top_right',
+    default_color = 'white',
+    double_buffer = true,
+    font = 'M+ 1mn:size=12',
+    gap_x = 10,
+    gap_y = 10,
+    draw_shades = false,
+    own_window = true,
+    own_window_type = 'desktop',
+    own_window_argb_visual = true,
+    own_window_colour = '#000000',
+    own_window_argb_value = 127,
+    use_xft = true,
+    default_bar_height = 6,
+    default_bar_width = 80,
+    short_units = true,
+}
+
+conky.text = [[
+$alignc${font M+ 1mn:size=36}${time %R}$font
+$alignc${time %F} ${time %A}
+CPU: ${alignr}${freq} M $cpubar
+RAM: ${alignr}${mem} $membar
+Swap: ${alignr}${swap} $swapbar
+File: ${alignr}${fs_used} $fs_bar
+Temp: ${alignr}${acpitemp} °C
+]]
+```
